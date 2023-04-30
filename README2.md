@@ -36,4 +36,4 @@ získanie výsledkov
 
 Potrebné modifikovať yml súbory v priečinku `./config`.
 
-Pre generovanie v7sledkov z MCMVT spusti `bash MCMVT.sh`. Výsledky sú uložené v `./reid_bidir/reid-matching/tools/`
+Pre generovanie výsledkov z MCMVT spusti `bash MCMVT.sh`. Výsledky sú uložené v `./reid_bidir/reid-matching/tools/`
