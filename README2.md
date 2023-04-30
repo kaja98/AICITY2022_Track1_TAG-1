@@ -4,24 +4,35 @@
 ## Detekcia
 `cd ./detector/yolov5/ && pip install -r requirements.txt`
 potrebné stiahnuť yolov5x model predtrénovaný na COCO
+
 Download [yolov5x model](https://github.com/ultralytics/yolov5/releases/download/v4.0/yolov5x.pt)
-spustenie detekcie: bash gen_images_aic.py aic.yml
+
+spustenie detekcie: `bash gen_images_aic.py aic.yml`
 
 ## Re-identifikácia
 `cd ./reid_training && pip install -r requirements.txt`
+
 stiahnuť predtrénovane modely (https://github.com/XingangPan/IBN-Net)
+
 jx_vit_base_p16_224-80ecf9dd.pth (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vitjx/jx_vit_base_p16_224-80ecf9dd.pth)
+
 ### Trénovanie a testovanie
 # ResNext101-IBN-a
 `python train.py --config_file configs/stage1/resnext101a_384.yml MODEL.DEVICE_ID "('0')"`
+
 `python train_stage2_v1.py --config_file configs/stage2/resnext101a_384.yml MODEL.DEVICE_ID "('0')" OUTPUT_DIR './logs/stage2/resnext101a_384/v1'`
+
 `python test.py --config_file configs/stage2/resnext101a_384.yml MODEL.DEVICE_ID "('0')" TEST.WEIGHT './logs/stage2/resnext101a_384/v1/resnext101_ibn_a_2.pth' OUTPUT_DIR './logs/stage2/resnext101a_384/v1'`
+
 trénovanie modelu kamery a orientácie
 `python train_cam.py --config_file configs/camera_view/camera_101a.yml`
+
 `python train_view.py --config_file configs/camera_view/view_101a.yml`
+
 získanie výsledkov
 `python ensemble.py`
 
 ##MCMVT
 Potrebné modifikovať yml súbory v priečinku `./config`.
+
 Pre generovanie v7sledkov z MCMVT spusti `bash MCMVT.sh`. Výsledky sú uložené v `./reid_bidir/reid-matching/tools/`
