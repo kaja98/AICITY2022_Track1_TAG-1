@@ -1,5 +1,5 @@
 # inštalácia
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 ## Detekcia
 `cd ./detector/yolov5/ && pip install -r requirements.txt`
