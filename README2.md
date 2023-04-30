@@ -46,5 +46,5 @@ Pre generovanie výsledkov z MCMVT spusti `bash MCMVT.sh`. Výsledky sú uložen
 
 vytvorenie datasetu vozidiel `python SplitDatasetAIC21.py`
 
-vytvorenie datasetu ľudí `python createPeopleDataset.py`
+vytvorenie datasetu ľudí `python label.py` a `python createPeopleDataset.py`
 
