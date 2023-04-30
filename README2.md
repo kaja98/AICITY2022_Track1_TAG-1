@@ -6,7 +6,9 @@
 
 potrebné stiahnuť yolov5x model predtrénovaný na COCO [yolov5x model](https://github.com/ultralytics/yolov5/releases/download/v4.0/yolov5x.pt)
 
-spustenie detekcie: `bash gen_images_aic.py aic.yml`
+generovanie obrázkov z videí: `bash gen_images_aic.py aic.yml`
+
+spustenie detekcie: `bash gen_det.sh aic.yml`
 
 ## Re-identifikácia
 `cd ./reid_training && pip install -r requirements.txt`
