@@ -3,18 +3,17 @@
 
 ## Detekcia
 `cd ./detector/yolov5/ && pip install -r requirements.txt`
-potrebné stiahnuť yolov5x model predtrénovaný na COCO
 
-Download [yolov5x model](https://github.com/ultralytics/yolov5/releases/download/v4.0/yolov5x.pt)
+potrebné stiahnuť yolov5x model predtrénovaný na COCO [yolov5x model](https://github.com/ultralytics/yolov5/releases/download/v4.0/yolov5x.pt)
 
 spustenie detekcie: `bash gen_images_aic.py aic.yml`
 
 ## Re-identifikácia
 `cd ./reid_training && pip install -r requirements.txt`
 
-stiahnuť predtrénovane modely (https://github.com/XingangPan/IBN-Net)
+stiahnuť predtrénovane modely (resnet101_ibn_a-59ea0ac6.pth, densenet169_ibn_a-9f32c161.pth, resnext101_ibn_a-6ace051d.pth and se_resnet101_ibn_a-fabed4e2.pth) [tu](https://github.com/XingangPan/IBN-Net)
 
-jx_vit_base_p16_224-80ecf9dd.pth (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vitjx/jx_vit_base_p16_224-80ecf9dd.pth)
+transformerový model (jx_vit_base_p16_224-80ecf9dd.pth) [tu](https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vitjx/jx_vit_base_p16_224-80ecf9dd.pth)
 
 ### Trénovanie a testovanie
 # ResNext101-IBN-a
