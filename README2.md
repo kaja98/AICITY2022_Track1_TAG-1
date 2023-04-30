@@ -34,8 +34,17 @@ trénovanie modelu kamery a orientácie
 získanie výsledkov
 `python ensemble.py`
 
+vizualizácia výsledkov `python vis_txt_result.py`
+
 ## MCMVT
 
 Potrebné modifikovať yml súbory v priečinku `./config`.
 
 Pre generovanie výsledkov z MCMVT spusti `bash MCMVT.sh`. Výsledky sú uložené v `./reid_bidir/reid-matching/tools/`
+
+## Tvorba datasetu
+
+vytvorenie datasetu vozidiel `python SplitDatasetAIC21.py`
+
+vytvorenie datasetu ľudí `python createPeopleDataset.py`
+
