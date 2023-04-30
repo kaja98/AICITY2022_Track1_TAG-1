@@ -16,7 +16,7 @@ stiahnuť predtrénovane modely (resnet101_ibn_a-59ea0ac6.pth, densenet169_ibn_a
 transformerový model (jx_vit_base_p16_224-80ecf9dd.pth) [tu](https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vitjx/jx_vit_base_p16_224-80ecf9dd.pth)
 
 ### Trénovanie a testovanie
-# ResNext101-IBN-a
+#### ResNext101-IBN-a
 `python train.py --config_file configs/stage1/resnext101a_384.yml MODEL.DEVICE_ID "('0')"`
 
 `python train_stage2_v1.py --config_file configs/stage2/resnext101a_384.yml MODEL.DEVICE_ID "('0')" OUTPUT_DIR './logs/stage2/resnext101a_384/v1'`
@@ -32,7 +32,7 @@ trénovanie modelu kamery a orientácie
 získanie výsledkov
 `python ensemble.py`
 
-##MCMVT
+## MCMVT
 
 Potrebné modifikovať yml súbory v priečinku `./config`.
 
