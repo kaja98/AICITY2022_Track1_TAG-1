@@ -24,6 +24,7 @@ transformerový model (jx_vit_base_p16_224-80ecf9dd.pth) [tu](https://github.com
 `python test.py --config_file configs/stage2/resnext101a_384.yml MODEL.DEVICE_ID "('0')" TEST.WEIGHT './logs/stage2/resnext101a_384/v1/resnext101_ibn_a_2.pth' OUTPUT_DIR './logs/stage2/resnext101a_384/v1'`
 
 trénovanie modelu kamery a orientácie
+
 `python train_cam.py --config_file configs/camera_view/camera_101a.yml`
 
 `python train_view.py --config_file configs/camera_view/view_101a.yml`
@@ -32,6 +33,7 @@ získanie výsledkov
 `python ensemble.py`
 
 ##MCMVT
+
 Potrebné modifikovať yml súbory v priečinku `./config`.
 
 Pre generovanie v7sledkov z MCMVT spusti `bash MCMVT.sh`. Výsledky sú uložené v `./reid_bidir/reid-matching/tools/`
