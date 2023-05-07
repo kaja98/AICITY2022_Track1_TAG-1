@@ -2,7 +2,7 @@
 
 Kód bol z modifikovaný z [AIC21-MTMC](https://github.com/LCFractal/AIC21-MTMC)
 
-# inštalácia
+## inštalácia
 `pip install -r requirements.txt`
 
 ## Datasety
