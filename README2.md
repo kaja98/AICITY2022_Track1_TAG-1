@@ -3,7 +3,7 @@
 
 ## Datasety
 
-dataset pre re-identifik8ciu vozidiel [AIC21_Track2_ReID](https://www.aicitychallenge.org/2021-track2-download/)
+dataset pre re-identifikáciu vozidiel [AIC21_Track2_ReID](https://www.aicitychallenge.org/2021-track2-download/)
 
 dataset pre MTMC vozidiel [AIC21_Track3_MTMC_Tracking](https://www.aicitychallenge.org/2021-track3-download/)
 
