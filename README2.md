@@ -1,6 +1,13 @@
 # inštalácia
 `pip install -r requirements.txt`
 
+## Datasety
+
+dataset [AIC21_Track2_ReID](https://www.aicitychallenge.org/2021-track2-download/)
+dataset [AIC21_Track3_MTMC_Tracking](https://www.aicitychallenge.org/2021-track3-download/)
+dataset [VeRi-776](https://nextcloud.fit.vutbr.cz/s/mWm5sjkA5mFBe3y)
+dataset [AIC23](https://www.aicitychallenge.org/2023-track1-download/)
+
 ## Detekcia
 `cd ./detector/yolov5/ && pip install -r requirements.txt`
 
