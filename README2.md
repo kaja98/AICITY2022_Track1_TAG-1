@@ -16,7 +16,7 @@ dataset pre MTMC ľudí [AIC23](https://www.aicitychallenge.org/2023-track1-down
 
 ## Tvorba datasetu
 
-vytvorenie datasetu vozidiel `python SplitDatasetAIC21.py ` 
+vytvorenie datasetu vozidiel `python SplitDatasetAIC21.py VehicleReID/reid_training/datasets/AIC21` 
 
 vytvorenie datasetu ľudí `python label.py` a `python createPeopleDataset.py` (potrebné nastaviť cesty root_dir)
 
