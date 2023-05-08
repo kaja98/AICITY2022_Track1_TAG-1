@@ -18,7 +18,7 @@ dataset pre MTMC ľudí [AIC23](https://www.aicitychallenge.org/2023-track1-down
 
 potrebné stiahnuť yolov5x model predtrénovaný na COCO [yolov5x model](https://github.com/ultralytics/yolov5/releases/download/v4.0/yolov5x.pt)
 
-potrebná modifikácia ciest v aic.yml
+potrebná modifikácia ciest v `aic.yml`
 
 generovanie obrázkov z videí: `bash gen_images_aic.py aic.yml`
 
@@ -32,6 +32,9 @@ stiahnuť predtrénovane modely (resnet101_ibn_a-59ea0ac6.pth, densenet169_ibn_a
 transformerový model (jx_vit_base_p16_224-80ecf9dd.pth) [tu](https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vitjx/jx_vit_base_p16_224-80ecf9dd.pth)
 
 ### Trénovanie a testovanie
+
+potrebná modifikácia `configs/stage1/*.yml` a `configs/stage2/*.yml`
+
 #### ResNext101-IBN-a
 `python train.py --config_file configs/stage1/resnext101a_384.yml MODEL.DEVICE_ID "('0')"`
 
