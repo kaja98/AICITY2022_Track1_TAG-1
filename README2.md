@@ -49,7 +49,7 @@ trénovanie stage2 (UDA) `python train_stage2_v1.py --config_file configs/stage2
 
 testovanie `python test.py --config_file configs/stage2/resnext101a_384.yml MODEL.DEVICE_ID "('0')" TEST.WEIGHT './logs/stage2/resnext101a_384/v1/resnext101_ibn_a_2.pth' OUTPUT_DIR './logs/stage2/resnext101a_384/v1'`
 
-trénovanie modelu kamery a orientácie
+#### trénovanie modelu kamery a orientácie
 
 trénovanie kamery `python train_cam.py --config_file configs/camera_view/camera_101a.yml`
 
