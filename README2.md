@@ -13,6 +13,13 @@ dataset pre MTMC vozidiel [AIC21_Track3_MTMC_Tracking](https://www.aicitychallen
 
 dataset pre MTMC ľudí [AIC23](https://www.aicitychallenge.org/2023-track1-download/)
 
+
+## Tvorba datasetu
+
+vytvorenie datasetu vozidiel `python SplitDatasetAIC21.py`
+
+vytvorenie datasetu ľudí `python label.py` a `python createPeopleDataset.py`
+
 ## Detekcia
 `cd ./detector/yolov5/ && pip install -r requirements.txt`
 
@@ -33,23 +40,22 @@ transformerový model (jx_vit_base_p16_224-80ecf9dd.pth) [tu](https://github.com
 
 ### Trénovanie a testovanie
 
-potrebná modifikácia `configs/stage1/*.yml` a `configs/stage2/*.yml`
+potrebná modifikáciaciest v yml súboroch `configs/stage1/*.yml` a `configs/stage2/*.yml`
 
 #### ResNext101-IBN-a
-`python train.py --config_file configs/stage1/resnext101a_384.yml MODEL.DEVICE_ID "('0')"`
+trénovanie stage1 (baseline model) `python train.py --config_file configs/stage1/resnext101a_384.yml MODEL.DEVICE_ID "('0')"`
 
-`python train_stage2_v1.py --config_file configs/stage2/resnext101a_384.yml MODEL.DEVICE_ID "('0')" OUTPUT_DIR './logs/stage2/resnext101a_384/v1'`
+trénovanie stage2 (UDA) `python train_stage2_v1.py --config_file configs/stage2/resnext101a_384.yml MODEL.DEVICE_ID "('0')" OUTPUT_DIR './logs/stage2/resnext101a_384/v1'`
 
-`python test.py --config_file configs/stage2/resnext101a_384.yml MODEL.DEVICE_ID "('0')" TEST.WEIGHT './logs/stage2/resnext101a_384/v1/resnext101_ibn_a_2.pth' OUTPUT_DIR './logs/stage2/resnext101a_384/v1'`
+testovanie `python test.py --config_file configs/stage2/resnext101a_384.yml MODEL.DEVICE_ID "('0')" TEST.WEIGHT './logs/stage2/resnext101a_384/v1/resnext101_ibn_a_2.pth' OUTPUT_DIR './logs/stage2/resnext101a_384/v1'`
 
 trénovanie modelu kamery a orientácie
 
-`python train_cam.py --config_file configs/camera_view/camera_101a.yml`
+trénovanie kamery `python train_cam.py --config_file configs/camera_view/camera_101a.yml`
 
-`python train_view.py --config_file configs/camera_view/view_101a.yml`
+trénovanie orientácie `python train_view.py --config_file configs/camera_view/view_101a.yml`
 
-získanie výsledkov
-`python ensemble.py`
+získanie výsledkov `python ensemble.py`
 
 vizualizácia výsledkov `python vis_txt_result.py`
 
@@ -58,10 +64,3 @@ vizualizácia výsledkov `python vis_txt_result.py`
 Potrebné modifikovať yml súbory v priečinku `./config`.
 
 Pre generovanie výsledkov z MCMVT spusti `bash MCMVT.sh`. Výsledky sú uložené v `./reid_bidir/reid-matching/tools/`
-
-## Tvorba datasetu
-
-vytvorenie datasetu vozidiel `python SplitDatasetAIC21.py`
-
-vytvorenie datasetu ľudí `python label.py` a `python createPeopleDataset.py`
-
