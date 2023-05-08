@@ -18,6 +18,8 @@ dataset pre MTMC ľudí [AIC23](https://www.aicitychallenge.org/2023-track1-down
 
 potrebné stiahnuť yolov5x model predtrénovaný na COCO [yolov5x model](https://github.com/ultralytics/yolov5/releases/download/v4.0/yolov5x.pt)
 
+potrebná modifikácia ciest v aic.yml
+
 generovanie obrázkov z videí: `bash gen_images_aic.py aic.yml`
 
 spustenie detekcie: `bash gen_det.sh aic.yml`
