@@ -16,9 +16,9 @@ dataset pre MTMC ľudí [AIC23](https://www.aicitychallenge.org/2023-track1-down
 
 ## Tvorba datasetu
 
-vytvorenie datasetu vozidiel `python SplitDatasetAIC21.py` (potrebné nastaviť cesty root_dir)
+vytvorenie datasetu vozidiel `python SplitDatasetAIC21.py ` 
 
-vytvorenie datasetu ľudí `python label.py` a `python createPeopleDataset.py`
+vytvorenie datasetu ľudí `python label.py` a `python createPeopleDataset.py` (potrebné nastaviť cesty root_dir)
 
 ## Detekcia
 `cd ./detector/yolov5/ && pip install -r requirements.txt`
