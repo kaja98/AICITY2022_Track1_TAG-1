@@ -38,6 +38,8 @@ stiahnuť predtrénovane modely (resnet101_ibn_a-59ea0ac6.pth, densenet169_ibn_a
 
 transformerový model (jx_vit_base_p16_224-80ecf9dd.pth) [tu](https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vitjx/jx_vit_base_p16_224-80ecf9dd.pth)
 
+a vložiť ich do priečinku `pretrained`
+
 ### Trénovanie a testovanie
 
 potrebná modifikáciaciest v yml súboroch `configs/stage1/*.yml` a `configs/stage2/*.yml`
